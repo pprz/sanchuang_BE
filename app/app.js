@@ -18,7 +18,7 @@ function applyBodyParse (app) {
 }
 
 function applyStatic (app, prefix = '/assets') {
-  const assetsDir = config.getItem('file.storeDir', 'app/static');
+  const assetsDir = config.getItem('file.storeDir', 'static');
   app.use(mount(prefix, serve(assetsDir)));
 }
 
