@@ -8,7 +8,7 @@ function applyConfig () {
   const cwd = process.cwd();
   const files = fs.readdirSync(`${cwd}/config`);
   for (const file of files) {
-    config.getConfigFromFile(`app/config/${file}`);
+    config.getConfigFromFile(`config/${file}`);
   }
   // 加载其它配置文件
   config.getConfigFromFile('app/extensions/file/config.js');
