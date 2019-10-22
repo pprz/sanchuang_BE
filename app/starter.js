@@ -11,7 +11,7 @@ function applyConfig () {
     config.getConfigFromFile(`config/${file}`);
   }
   // 加载其它配置文件
-  config.getConfigFromFile('app/extensions/file/config.js');
+  config.getConfigFromFile('extensions/file/config.js');
 }
 
 const run = async () => {
