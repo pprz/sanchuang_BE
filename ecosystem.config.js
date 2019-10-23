@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
     name: 'API',
-    script: 'app/starter.js --env production',
+    script: 'app/starter.js',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     args: 'one two',
