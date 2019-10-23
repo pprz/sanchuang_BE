@@ -7,7 +7,6 @@ const fs = require('fs');
 function applyConfig () {
   const cwd = process.cwd();
   console.log('cwd===================================', cwd)
-  console.log('env===================================', process.env)
   const files = fs.readdirSync(`${cwd}/app/config`);
   for (const file of files) {
     config.getConfigFromFile(`app/config/${file}`);
