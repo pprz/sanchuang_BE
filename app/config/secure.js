@@ -2,8 +2,8 @@
 
 module.exports = {
   db: {
-    database: 'zerg',
-    host: '140.143.228.93',
+    database: 'sanchuang',
+    host: '49.232.70.71',
     dialect: 'mysql',
     port: 3306,
     username: 'root',
