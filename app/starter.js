@@ -6,12 +6,12 @@ const fs = require('fs');
 // 1. 必须最开始加载配置，因为其他很多扩展依赖于配置
 function applyConfig () {
   const cwd = process.cwd();
-  const files = fs.readdirSync(`${cwd}/config`);
+  const files = fs.readdirSync(`${cwd}/app/config`);
   for (const file of files) {
-    config.getConfigFromFile(`config/${file}`);
+    config.getConfigFromFile(`app/config/${file}`);
   }
   // 加载其它配置文件
-  config.getConfigFromFile('extensions/file/config.js');
+  config.getConfigFromFile('app/extensions/file/config.js');
 }
 
 const run = async () => {
