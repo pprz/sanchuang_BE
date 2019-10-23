@@ -8,7 +8,7 @@ module.exports = {
     port: 3306,
     username: 'root',
     password: 'cmyhj002',
-    logging: true,
+    logging: console.log,
     timezone: '+08:00'
   },
   wx: {
