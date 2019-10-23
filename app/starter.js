@@ -12,7 +12,6 @@ function applyConfig () {
   }
   // 加载其它配置文件
   config.getConfigFromFile('extensions/file/config.js');
-  console.log('config', config)
 }
 
 const run = async () => {
@@ -21,7 +20,7 @@ const run = async () => {
   const app = await createApp();
   const port = config.getItem('port');
   app.listen(port, () => {
-    app.context.logger.info(`listening at ${config.siteDomain}`);
+    app.context.logger.info(`listening at ${config.store.siteDomain}`);
   });
 };
 // 启动应用
