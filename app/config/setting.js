@@ -1,9 +1,9 @@
 'use strict';
 
-let siteDomain = 'http://localhost:5000/';
+let siteDomain = '127.0.0.1/';
 switch (process.env.NODE_ENV) {
   case 'development':
-    siteDomain = 'http://localhost:5000/';
+    siteDomain = '127.0.0.1/';
     break;
   case 'production':
     siteDomain = 'https://www.guangtai.com/';
