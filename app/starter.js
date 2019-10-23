@@ -21,7 +21,7 @@ const run = async () => {
   const app = await createApp();
   const port = config.getItem('port');
   app.listen(port, () => {
-    app.context.logger.info(`listening at ${process.env.NODE_ENV}:${port}`);
+    app.context.logger.info(`listening at ${config.sitDomain}`);
   });
 };
 // 启动应用
