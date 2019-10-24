@@ -61,6 +61,7 @@ class UserDao {
 
   async getAuths (ctx) {
     let user = ctx.currentUser;
+    console.log('getAuths======', user)
     let auths = await ctx.manager.authModel.findAll({
       where: {
         group_id: user.group_id
