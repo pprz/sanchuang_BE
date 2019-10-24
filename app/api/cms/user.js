@@ -182,6 +182,7 @@ user.linGet(
   },
   loginRequired,
   async ctx => {
+    console.log('111111111111')
     let user = await userDao.getAuths(ctx);
     ctx.json(user);
   }
