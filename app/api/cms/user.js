@@ -162,6 +162,7 @@ user.linGet(
   refreshTokenRequiredWithUnifyException,
   async ctx => {
     let user = ctx.currentUser;
+    console.log('get token', user)
     const {
       accessToken,
       refreshToken
