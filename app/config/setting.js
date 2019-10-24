@@ -3,10 +3,10 @@
 let siteDomain = '127.0.0.1:5000/';
 switch (process.env.NODE_ENV) {
   case 'development':
-    siteDomain = 'https://www.guangtai.xyz/';
+    siteDomain = 'https://www.guangtai.xyz/sanchuang';
     break;
   case 'production':
-    siteDomain = 'https://www.guangtai.xyz/';
+    siteDomain = 'https://www.guangtai.xyz/sanchuang';
     break;
 }
 module.exports = {
