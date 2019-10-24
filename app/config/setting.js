@@ -12,7 +12,7 @@ switch (process.env.NODE_ENV) {
 module.exports = {
   port: 5000,
   siteDomain,
-  serverApi: 'https://www.guangtai.xyz/sanchuang',
+  serverApi: 'https://www.guangtai.com/sanchuang',
   countDefault: 10,
   pageDefault: 0,
   apiDir: 'app/api',
