@@ -19,6 +19,7 @@ const run = async () => {
   // 创建super
   try {
     await User.create({
+      username: 'super',
       nickname: 'super',
       admin: UserAdmin.ADMIN,
       password: '123456'
