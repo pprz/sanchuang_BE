@@ -40,7 +40,6 @@ class WXManager {
         }
       })
     }
-    console.log('user', user)
     return getTokens(user)
   }
 }

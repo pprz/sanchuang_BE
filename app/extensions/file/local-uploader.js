@@ -1,6 +1,6 @@
 const { Uploader } = require('lin-mizar/lin/file');
 const { File } = require('lin-mizar');
-const { config } = require('lin-mizar/lin/config');
+// const { config } = require('lin-mizar/lin/config');
 const fs = require('fs');
 const path = require('path');
 
@@ -15,7 +15,7 @@ class LocalUploader extends Uploader {
       // 由于stream的特性，当读取其中的数据时，它的buffer会被消费
       // 所以此处深拷贝一份计算md5值
       const md5 = this.generateMd5(file);
-      const siteDomain = config.getItem('siteDomain', '')
+      // const siteDomain = config.getItem('siteDomain', '')
       // 检查md5存在
       const exist = await File.findOne({
         where: {
@@ -27,7 +27,7 @@ class LocalUploader extends Uploader {
           key: file.fieldname,
           id: exist.id,
           path: `${exist.path}`,
-          url: `${siteDomain}sanchuang/assets/${exist.path}`
+          url: `https://www.guangtai.xyz/sanchuang/assets/${exist.path}`
           // url: `${exist.path}`
         });
       } else {
@@ -52,7 +52,7 @@ class LocalUploader extends Uploader {
           key: file.fieldname,
           id: saved.id,
           path: `${saved.path}`,
-          url: `${siteDomain}sanchuang/assets/${saved.path}`
+          url: `https://www.guangtai.xyz/sanchuang/assets/${saved.path}`
           // url: `${saved.path}`
         });
       }
