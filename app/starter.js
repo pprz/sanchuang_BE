@@ -6,7 +6,7 @@ const fs = require('fs');
 // 1. 必须最开始加载配置，因为其他很多扩展依赖于配置
 function applyConfig () {
   const cwd = process.cwd();
-  console.log('cwd===================================', cwd)
+  console.log('cwd-----------------------------', cwd)
   const files = fs.readdirSync(`${cwd}/app/config`);
   for (const file of files) {
     config.getConfigFromFile(`app/config/${file}`);
