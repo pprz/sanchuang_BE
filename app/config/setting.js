@@ -3,7 +3,7 @@
 let siteDomain = '127.0.0.1:5000/';
 switch (process.env.NODE_ENV) {
   case 'development':
-    siteDomain = 'http://localhost:5000/';
+    siteDomain = 'https://www.guangtai.com/';
     break;
   case 'production':
     siteDomain = 'https://www.guangtai.com/';
