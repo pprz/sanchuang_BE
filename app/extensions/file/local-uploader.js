@@ -52,7 +52,7 @@ class LocalUploader extends Uploader {
           key: file.fieldname,
           id: saved.id,
           path: `${saved.path}`,
-          url: `${siteDomain}assets/${saved.path}`
+          url: `${siteDomain}sanchuang/assets/${saved.path}`
           // url: `${saved.path}`
         });
       }
