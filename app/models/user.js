@@ -18,6 +18,10 @@ const {
 const Sequelize = require('sequelize');
 
 modelExtend(UserInterface, {
+  username: {
+    type: Sequelize.STRING(24),
+    allowNull: true
+  },
   openid: {
     type: Sequelize.STRING(64),
     allowNull: true
