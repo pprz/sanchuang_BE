@@ -12,8 +12,8 @@ module.exports = {
     timezone: '+08:00'
   },
   wx: {
-    appId: 'wx5186c11f0c8e8d0e',
-    appSecret: 'a5f107f02635529da1c76f21fb2162f9',
+    appId: 'wx955f05749d44c8d6',
+    appSecret: 'f282cc13f47c17e00aeee15af447cefa',
     loginUrl: 'https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=%s&js_code=%s&grant_type=authorization_code'
   },
   secret:
