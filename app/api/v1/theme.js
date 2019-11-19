@@ -11,7 +11,7 @@ themeApi.get('/', async ctx => {
   const themes = await Theme.findAll({
     where: {
       id: {
-        [Op.in]: [1, 2, 3, 4, 5]
+        [Op.in]: [1, 2, 3, 4, 5, 6, 7]
       }
     }
   })
