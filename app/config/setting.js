@@ -3,7 +3,7 @@
 let siteDomain = '127.0.0.1:5000/';
 switch (process.env.NODE_ENV) {
   case 'development':
-    siteDomain = 'https://www.guangtai.xyz/sanchuang';
+    siteDomain = 'http://localhost:5000';
     break;
   case 'production':
     siteDomain = 'https://www.guangtai.xyz/sanchuang';
@@ -12,7 +12,7 @@ switch (process.env.NODE_ENV) {
 module.exports = {
   port: 5000,
   siteDomain,
-  serverApi: 'https://www.guangtai.xyz/sanchuang',
+  serverApi: siteDomain,
   countDefault: 10,
   pageDefault: 0,
   apiDir: 'app/api',
