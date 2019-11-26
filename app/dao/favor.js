@@ -12,7 +12,18 @@ class FavorDao {
     })
   }
 
-  async getMyClassicFavors (uid) {
+  static async userLikeIt (art_id, uid) {
+    const favor = await Favor.findOne({
+      where: {
+        uid,
+        projectId: art_id
+      }
+    })
+    // eslint-disable-next-line no-unneeded-ternary
+    return favor ? true : false
+  }
+
+  static async getMyClassicFavors (uid) {
     const arts = await Favor.findAll({
       where: {
         uid

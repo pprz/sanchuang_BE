@@ -30,7 +30,7 @@ projectApi.get('/', async ctx => {
   console.log('projects', projects)
   if (!projects || projects.length < 1) {
     throw new NotFound({
-      msg: '没有找到相关书籍'
+      msg: '没有找到相关项目'
     });
   }
   ctx.json(projects);

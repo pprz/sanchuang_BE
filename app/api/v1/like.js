@@ -8,7 +8,7 @@ const {
   PositiveIdValidator
 } = require('../../validators/common')
 const { FavorDao } = require('../../dao/favor')
-const favorDao = new FavorDao()
+const { ProjectNotFound } = require('../../libs/err-code');
 // const { ProjectDao } = require('../../dao/project')
 // const favorDao=new FavorDao()
 const likeApi = new LinRouter({
@@ -73,7 +73,35 @@ like.get('/cancel', new Auth().m, async ctx => {
 
 like.get('/favor', new Auth().m, async ctx => {
   const uid = ctx.auth.uid
-  ctx.body = await favorDao.getMyClassicFavors(uid)
+  ctx.body = await FavorDao.getMyClassicFavors(uid)
+})
+
+like.get('/favor/count', new Auth().m, async ctx => {
+  console.log('/favor/count', ctx.auth.uid)
+  const count = await Favor.count({
+    where: {
+      uid: ctx.auth.uid
+    }
+  })
+  ctx.body = count
+})
+
+like.get('/:id/favor', new Auth().m, async ctx => {
+  const v = await new PositiveIdValidator().validate(ctx)
+  const id = v.get('path.id')
+  const project = await Project.findOne({
+    where: {
+      id
+    }
+  })
+  if (!project) {
+    throw new ProjectNotFound();
+  }
+  const likePrevious = await FavorDao.userLikeIt(id, ctx.auth.uid)
+  ctx.body = {
+    fav_nums: project.fav_nums,
+    like_status: likePrevious
+  }
 })
 
 module.exports = { likeApi, like }

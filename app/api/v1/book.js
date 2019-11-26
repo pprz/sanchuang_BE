@@ -76,11 +76,11 @@ bookApi.put('/:id', async ctx => {
 bookApi.linDelete(
   "deleteBook",
   "/:id",
-  {
-    auth: "删除图书", // 权限名
-    module: "项目", // 权限模块
-    mount: true // 是否挂载权限，为false时，该权限不生效
-  },
+  // {
+  //   auth: "删除图书", // 权限名
+  //   module: "项目", // 权限模块
+  //   mount: true // 是否挂载权限，为false时，该权限不生效
+  // },
   groupRequired,
   async ctx => {
     const id = getSafeParamId(ctx);
@@ -91,4 +91,4 @@ bookApi.linDelete(
   }
 );
 
-module.exports = { bookApi, [disableLoading]: false };
+module.exports = { bookApi, [disableLoading]: true };
