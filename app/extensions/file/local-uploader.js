@@ -27,7 +27,7 @@ class LocalUploader extends Uploader {
           key: file.fieldname,
           id: exist.id,
           path: `${exist.path}`,
-          url: `${serverApi}/assets/${exist.path}`
+          url: `${serverApi}assets/${exist.path}`
           // url: `${exist.path}`
         });
       } else {
@@ -52,7 +52,7 @@ class LocalUploader extends Uploader {
           key: file.fieldname,
           id: saved.id,
           path: `${saved.path}`,
-          url: `${serverApi}/assets/${saved.path}`
+          url: `${serverApi}assets/${saved.path}`
           // url: `${saved.path}`
         });
       }

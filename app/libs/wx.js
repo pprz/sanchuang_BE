@@ -31,7 +31,6 @@ class WXManager {
 
     if (!user.group_id) {
       const group = await userDao.registerGroup()
-      console.log('user:', user)
       User.update({
         group_id: group.id
       }, {
