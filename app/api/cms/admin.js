@@ -124,7 +124,7 @@ admin.linDelete(
 
 admin.linPut(
   'updateUser',
-  '/:id',
+  '/user/:id',
   {
     auth: '管理员更新用户信息',
     module: '管理员',

@@ -83,7 +83,7 @@ like.get('/favor/count', new Auth().m, async ctx => {
       uid: ctx.auth.uid
     }
   })
-  ctx.body = count
+  ctx.body = count + ''
 })
 
 like.get('/:id/favor', new Auth().m, async ctx => {

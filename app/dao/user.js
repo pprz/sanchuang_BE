@@ -107,6 +107,7 @@ class UserDao {
     user.username = v.get('body.username');
     user.password = v.get('body.password');
     user.group_id = v.get('body.group_id');
+    user.nickname = v.get('body.nickname');
     if (v.get('body.email') && v.get('body.email').trim() !== '') {
       user.email = v.get('body.email');
     }
