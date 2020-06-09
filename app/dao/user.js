@@ -124,8 +124,10 @@ class UserDao {
   }
 
   async registerByOpenid (ctx, openid) {
+    const nickname = openid + ''
+    console.log('~~~~~~~~~~nickname: ', nickname.substring(0, 22));
     const result = await ctx.manager.userModel.create({
-      nickname: '',
+      nickname: nickname.substring(0, 22),
       openid,
       password: ''
     })
